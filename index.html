@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
+
 <body>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-            <div class="carousel-item active mx-2 my-2 text-center">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active text-center">
+                <img src="/images/desa-sidodadi.webp" alt="">
+
+            </div>
+
+            <div class="carousel-item mx-2 my-2 text-center">
+                <h1>JENIS KELAMIN</h1>
+                <img src="/images/male-female.webp" alt="">
+            </div>
+
+            <div class="carousel-item mx-2 my-2 text-center">
                 <h1>Populasi Penduduk Desa Sidodadi Berdasarkan Usia</h1>
                 <canvas id="bar-chart"></canvas>
             </div>
+
             <div class="carousel-item mx-2 my-2 text-center">
                 <h1>Populasi Penduduk Desa Sidodadi Berdasarkan Pekerjaan</h1>
                 <canvas id="doughnut-chart" width="80" height="40"></canvas>
@@ -22,89 +36,92 @@
                 <h1>Populasi Penduduk Desa Sidodadi Berdasarkan Pendapatan</h1>
                 <canvas id="line-chart"></canvas>
             </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        </button>
+    </div>
 
-      
 
-        <script src="/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-        <script src="/js/chart.js"></script>
 
-        <script>
-            new Chart(document.getElementById("bar-chart"), {
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="/js/chart.js"></script>
+
+    <script>
+        new Chart(document.getElementById("bar-chart"), {
             type: 'bar',
             data: {
-                    labels: ["0-6", "7-12", "13-27", "28-35", "35-42", "42 keatas"],
-                    datasets: [
+                labels: ["0-6", "7-12", "13-27", "28-35", "35-42", "42 keatas"],
+                datasets: [
                     {
-                    label: "Penduduk (orang)",
-                    backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e50cd"],
-                    data: [2478,4267,4734,3784,1433,1221]
+                        label: "Penduduk (orang)",
+                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#3e50cd"],
+                        data: [2478, 4267, 4734, 3784, 1433, 1221]
                     }
-                    ]
-                    },
+                ]
+            },
             options: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                    }
-                    }
-            });
+                legend: { display: false },
+                title: {
+                    display: true,
+                }
+            }
+        });
 
-        </script>
-        <script>
-            new Chart(document.getElementById("doughnut-chart"), {
+    </script>
+    <script>
+        new Chart(document.getElementById("doughnut-chart"), {
             type: 'doughnut',
             data: {
-                    labels: ["0-6", "7-12", "13-27", "28-35", "35-42", "42 keatas"],
-                    datasets: [
+                labels: ["0-6", "7-12", "13-27", "28-35", "35-42", "42 keatas"],
+                datasets: [
                     {
-                    label: "Penduduk (orang)",
-                    backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#3e50cd"],
-                    data: [2478,4267,4734,3784,1433,1221]
+                        label: "Penduduk (orang)",
+                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#3e50cd"],
+                        data: [2478, 4267, 4734, 3784, 1433, 1221]
                     }
-                    ]
-                    },
+                ]
+            },
             options: {
-                    legend: { display: false },
-                    title: {
-                        display: true,
-                    }
-                    }
-            });
+                legend: { display: false },
+                title: {
+                    display: true,
+                }
+            }
+        });
 
-        </script>
-        <script>
-            new Chart(document.getElementById("line-chart"), {
-  type: 'line',
-  data: {
-    labels: ["<1jt","1jt-3jt","3jt-5jt",">5jt"],
-    datasets: [{ 
-        data: [1000,2500,1300,850],
-        label: "per bulan",
-        borderColor: "#3e95cd",
-        fill: false
-      },
-    ]
-  },
-  options: {
-    title: {
-      display: true,
-    }
-  }
-});
+    </script>
+    <script>
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: ["<1jt", "1jt-3jt", "3jt-5jt", ">5jt"],
+                datasets: [{
+                    data: [1000, 2500, 1300, 850],
+                    label: "per bulan",
+                    borderColor: "#3e95cd",
+                    fill: false
+                },
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                }
+            }
+        });
 
-        </script>
+    </script>
 
-      
+
 </body>
+
 </html>
