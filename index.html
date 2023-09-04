@@ -6,10 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+    
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+    
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      </style>
 </head>
 
 <body>
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../images/home.png" class="img-fluid" alt="Informasi desa sidodadi">
+            </div>
+            <div class="swiper-slide ">
+                <img src="../images/male-female-3d.png" class="img-fluid" alt="Male Female">
+                <p>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/tese.png" class="img-fluid" alt="Male Female">
+                <p>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/male-female.webp" class="img-fluid" alt="Male Female">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/male-female.webp" class="img-fluid" alt="Male Female">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/male-female.webp" class="img-fluid" alt="Male Female">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
 
             <div class="carousel-item active text-center">
@@ -47,15 +112,29 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+    </div> -->
 
 
 
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="/js/chart.js"></script>
-
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+  
     <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "flip",
+        centeredSlides: true,
+        autoplay: {
+          delay: 20000,
+          disableOnInteraction: false,
+        },
+  
+      });
+    </script>
+    
+    <!-- <script>
         new Chart(document.getElementById("bar-chart"), {
             type: 'bar',
             data: {
@@ -119,7 +198,7 @@
             }
         });
 
-    </script>
+    </script> -->
 
 
 </body>
